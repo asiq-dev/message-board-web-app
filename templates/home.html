@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>This is home page</h1>
+    <div class="container">
+        <h1>This is home page</h1>
 
-    <ul>
-        {% for post in post_list %}
-        <li>{{ post.text }}</li>
-        {% endfor %}
-    </ul>
+        <ul class="post" style="display: flex; list-style: none; gap: 10px; justify-content: center;">
+            {% for post in post_list %}
+            <div style="height: 100px; width: 200px; background-color: aqua; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;"><li>{{ post.text }}</li></div>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
